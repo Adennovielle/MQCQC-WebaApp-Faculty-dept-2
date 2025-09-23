@@ -64,7 +64,6 @@ class Sidebar extends HTMLElement {
 
     if (toggleSubmenu) {
       toggleSubmenu.addEventListener("click", (e) => {
-        e.preventDefault();
         toggleSubmenu.classList.toggle("toggle-submenu");
       });
     }

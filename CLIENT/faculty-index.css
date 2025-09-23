@@ -9,6 +9,7 @@
   --transition-speed: 0.4s;
   --faculty-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.126);
   --card-bg-color: rgb(245, 245, 245);
+  --btn-hover-effect: #003467d7;
 }
 
 /* -------DEFAULT FORMAT----------  */
@@ -22,6 +23,16 @@ button {
   outline: none;
   border: none;
   cursor: pointer;
+}
+input {
+  padding: 5px;
+  border: 1px solid var(--primary-color);
+  outline-color: var(--primary-color);
+  border-radius: 15px;
+}
+select {
+  outline-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 h2,
 h3,
@@ -37,7 +48,7 @@ ul {
 }
 body {
   overflow-x: hidden;
-  background-color: rgb(238, 238, 238);
+  background-color: #eeeeee;
   padding-top: 85px;
 }
 
@@ -90,7 +101,7 @@ body {
 .faculty-sidebar {
   position: fixed;
   top: 60px;
-  left: -340px;
+  left: 0px;
   bottom: 0;
   width: 340px;
   padding: 30px 30px;
@@ -102,8 +113,8 @@ body {
 .faculty-sidebar::-webkit-scrollbar {
   display: none;
 }
-.faculty-sidebar.open {
-  left: 0px;
+.faculty-sidebar.close {
+  left: -340px;
 }
 .faculty-sidebar .fa-xmark {
   position: absolute;
@@ -312,11 +323,11 @@ main {
   margin: 0 auto;
   /* border: 2px solid red; */
   background-color: transparent;
-  padding: 0 25px;
+  padding-left: 370px;
 }
 
 main.expanded {
-  padding-left: 370px;
+  padding: 0 25px;
 }
 
 /*----------FACULTY-USER-AND-NOTIFICATION----------*/
@@ -327,7 +338,7 @@ main.expanded {
   justify-content: space-between;
   padding: 20px 0;
   border-bottom: 2px solid var(--primary-color);
-  width: 100%;
+  width: 95%;
   max-width: 1250px;
   margin: 0 auto;
 }
@@ -368,7 +379,7 @@ p {
 .faculty-user-and-notification .notification-bell {
   /* border: 2px solid rgb(36, 43, 43); */
   position: relative;
-  right: 15px;
+  right: 0px;
 }
 
 /* <!------------FACULTY USER INFO CARD------------> */
@@ -480,4 +491,78 @@ p {
 }
 .faculty-status-card-box ul li i {
   font-size: 35px;
+}
+
+/* <!------------FACULTY FILTER AND SEARCH CARD------------> */
+
+.faculty-filter-search-box {
+  /* border: 3px solid rgb(255, 200, 0); */
+  padding: 12px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: var(--card-bg-color);
+  box-shadow: var(--faculty-box-shadow);
+  border-radius: 4px;
+}
+.faculty-filter-search-box h4 {
+  text-align: center;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+}
+
+.faculty-filter-search-box .filter-form-box {
+  /* border: 3px solid rgb(255, 30, 0); */
+  margin-top: 20px;
+}
+.faculty-filter-search-box .filter-form-box form .input-with-icon-box {
+  position: relative;
+}
+.faculty-filter-search-box .filter-form-box form .input-with-icon-box input {
+  display: block;
+  width: 100%;
+  padding-left: 45px;
+}
+.faculty-filter-search-box
+  .filter-form-box
+  form
+  .input-with-icon-box
+  input::placeholder {
+  color: var(--primary-color);
+}
+.faculty-filter-search-box .filter-form-box form .input-with-icon-box i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  font-size: 15px;
+}
+.faculty-filter-search-box .filter-form-box form .select-and-btn-box {
+  /* border: 3px solid rgb(94, 255, 0); */
+  padding: 10px 20px;
+  display: flex;
+  gap: 15px;
+}
+.faculty-filter-search-box
+  .filter-form-box
+  form
+  .select-and-btn-box
+  .submit-btn:hover {
+  background-color: var(--btn-hover-effect);
+}
+.faculty-filter-search-box .filter-form-box form .select-and-btn-box select {
+  /* border: 3px solid rgb(0, 8, 255); */
+  padding: 8px 5px;
+  flex: 1;
+}
+.faculty-filter-search-box
+  .filter-form-box
+  form
+  .select-and-btn-box
+  .submit-btn {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  padding: 8px 30px;
 }

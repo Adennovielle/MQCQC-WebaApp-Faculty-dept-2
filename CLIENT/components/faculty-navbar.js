@@ -27,10 +27,10 @@ class Navbar extends HTMLElement {
       }
 
       toggleMenu.addEventListener("click", () => {
-        facultySidebar.classList.toggle("open");
+        facultySidebar.classList.toggle("close");
         main.classList.toggle(
           "expanded",
-          facultySidebar.classList.contains("open")
+          facultySidebar.classList.contains("close")
         );
       });
     });
