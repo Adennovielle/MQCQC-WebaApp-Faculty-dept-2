@@ -51,6 +51,21 @@ body {
   background-color: #eeeeee;
   padding-top: 85px;
 }
+/* Global scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-track {
+  /* background: rgb(218, 217, 213); */
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
 
 /* ----------NAVBAR SECTION------------*/
 .navbar-box {
@@ -565,4 +580,67 @@ p {
   border-radius: 5px;
   color: rgb(255, 255, 255);
   padding: 8px 30px;
+}
+
+/*--------------FACULTY DATA TABLE---------*/
+.faculty-table-box {
+  border: 2px SOLID red;
+  overflow: auto;
+  width: 89%;
+  max-width: 1270px;
+  margin: 0px auto;
+  box-shadow: var(--faculty-box-shadow);
+  border-radius: 4px;
+  padding: 50px 20px;
+  height: 370px;
+  position: relative;
+}
+.faculty-table-box .table-fix-header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  background-color: rgba(128, 0, 0, 0.427);
+  border: 3px SOLID rgb(50, 255, 5);
+}
+.faculty-table-box .table-header-box h4 {
+  padding: 12px 0px;
+}
+.faculty-table-box .table-header-box hr {
+  border: 1px solid var(--primary-color);
+  width: 1450px;
+  margin-bottom: 5px;
+}
+.faculty-table-box .table-header {
+  display: grid;
+  grid-template-columns: repeat(12, 120px);
+  /* border: 3px solid rgb(238, 3, 247); */
+}
+.faculty-table-box .table-header li {
+  color: white;
+  font-weight: bold;
+  font-size: 11px;
+  /* border: 2px solid rgb(43, 255, 0); */
+  height: 100%;
+  width: 100%;
+  padding: 12px 0;
+  display: grid;
+  place-items: center;
+  background-color: var(--primary-color);
+}
+
+.faculty-table-box .table-data {
+  display: grid;
+  grid-template-columns: repeat(12, 120px);
+  /* border: 3px solid blue; */
+}
+.faculty-table-box .table-data li {
+  font-size: 12px;
+  /* border: 2px solid rgb(255, 187, 0); */
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 8px 0;
 }
