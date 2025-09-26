@@ -48,6 +48,9 @@ class Sidebar extends HTMLElement {
                   </li>
                 </ul>
               </li>
+              <li>
+                <a href="/Client/pages/faculty-file-table/faculty-file-table.html"><i class="fa-solid fa-file"></i>Files </a>
+              </li>
               <hr class="horizontal-line" />
               <li>
                 <a href="#">

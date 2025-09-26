@@ -4,7 +4,7 @@ class userNotification extends HTMLElement {
             
       <div class="faculty-user-and-notification">
         <div class="faculty-user">
-          <h4><span></span>FACULTY</h4>
+          <h4><span class="middle-dot"></span>FACULTY</h4>
           <p><span class="pipeline">|</span>Teacher</p>
         </div>
         <div class="notification-bell">

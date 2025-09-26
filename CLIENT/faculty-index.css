@@ -10,6 +10,8 @@
   --faculty-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.126);
   --card-bg-color: rgb(245, 245, 245);
   --btn-hover-effect: #003467d7;
+  --body-bg-color: #eeeeee;
+  --scrollbar-bg-color: #dcdbdb;
 }
 
 /* -------DEFAULT FORMAT----------  */
@@ -48,9 +50,17 @@ ul {
 }
 body {
   overflow-x: hidden;
-  background-color: #eeeeee;
+  background-color: var(--body-bg-color);
   padding-top: 85px;
 }
+/*----------UTILITY CLASS--------------*/
+.middle-dot {
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  background-color: var(--primary-color);
+}
+
 /* Global scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
@@ -58,13 +68,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  /* background: rgb(218, 217, 213); */
-  background-color: white;
+  background-color: var(--scrollbar-bg-color);
+  border-radius: 5px;
 }
-
+::-webkit-scrollbar-corner {
+  background-color: var(--scrollbar-bg-color);
+}
 ::-webkit-scrollbar-thumb {
   background: var(--primary-color);
   border-radius: 5px;
+  cursor: pointer;
 }
 
 /* ----------NAVBAR SECTION------------*/
@@ -377,13 +390,7 @@ p {
   /* border: 3px solid rgb(254, 144, 10); */
   font-size: 13px;
 }
-.faculty-user-and-notification .faculty-user h4 span {
-  border-radius: 50%;
-  height: 8px;
-  width: 8px;
-  background-color: var(--primary-color);
-  /* margin-right: 5px; */
-}
+
 .faculty-user-and-notification .faculty-user span {
   margin-right: 7px;
 }
@@ -408,6 +415,11 @@ p {
   background-color: var(--card-bg-color);
   box-shadow: var(--faculty-box-shadow);
   border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.faculty-userinfo-card:hover {
+  transform: scale(1.05);
 }
 .faculty-userinfo-card .card {
   display: flex;
@@ -480,6 +492,7 @@ p {
   max-width: 1250px;
   margin: 0 auto;
 }
+
 .faculty-status-card-box i {
   color: var(--secondary-color);
 }
@@ -503,6 +516,11 @@ p {
   box-shadow: var(--faculty-box-shadow);
   height: 150px;
   border-radius: 4px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.faculty-status-card-box ul li:hover {
+  transform: scale(1.1);
 }
 .faculty-status-card-box ul li i {
   font-size: 35px;
@@ -524,11 +542,12 @@ p {
   text-align: center;
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 5px;
+  font-size: 13px;
 }
 
 .faculty-filter-search-box .filter-form-box {
   /* border: 3px solid rgb(255, 30, 0); */
-  margin-top: 20px;
+  margin-top: 18px;
 }
 .faculty-filter-search-box .filter-form-box form .input-with-icon-box {
   position: relative;
@@ -555,7 +574,7 @@ p {
 }
 .faculty-filter-search-box .filter-form-box form .select-and-btn-box {
   /* border: 3px solid rgb(94, 255, 0); */
-  padding: 10px 20px;
+  padding: 7px 20px;
   display: flex;
   gap: 15px;
 }
@@ -568,7 +587,7 @@ p {
 }
 .faculty-filter-search-box .filter-form-box form .select-and-btn-box select {
   /* border: 3px solid rgb(0, 8, 255); */
-  padding: 8px 5px;
+  padding: 0px 5px;
   flex: 1;
 }
 .faculty-filter-search-box
@@ -584,14 +603,14 @@ p {
 
 /*--------------FACULTY DATA TABLE---------*/
 .faculty-table-box {
-  border: 2px SOLID red;
+  /* border: 2px SOLID red; */
   overflow: auto;
   width: 89%;
   max-width: 1270px;
   margin: 0px auto;
   box-shadow: var(--faculty-box-shadow);
   border-radius: 4px;
-  padding: 50px 20px;
+  padding: 0 0 5px 20px;
   height: 370px;
   position: relative;
 }
@@ -599,15 +618,18 @@ p {
   position: sticky;
   top: 0;
   right: 0;
-  background-color: rgba(128, 0, 0, 0.427);
-  border: 3px SOLID rgb(50, 255, 5);
+  /* border: 3px SOLID rgb(50, 255, 5); */
+  z-index: 200;
+  background-color: #eeeeee;
+  min-width: 1440px;
+  padding-top: 5px;
 }
 .faculty-table-box .table-header-box h4 {
   padding: 12px 0px;
 }
 .faculty-table-box .table-header-box hr {
   border: 1px solid var(--primary-color);
-  width: 1450px;
+  width: 100%;
   margin-bottom: 5px;
 }
 .faculty-table-box .table-header {
@@ -619,9 +641,7 @@ p {
   color: white;
   font-weight: bold;
   font-size: 11px;
-  /* border: 2px solid rgb(43, 255, 0); */
-  height: 100%;
-  width: 100%;
+  /* border: 2px solid rgb(5, 197, 255); */
   padding: 12px 0;
   display: grid;
   place-items: center;
@@ -636,6 +656,7 @@ p {
 .faculty-table-box .table-data li {
   font-size: 12px;
   /* border: 2px solid rgb(255, 187, 0); */
+  border-bottom: 2px solid rgba(128, 128, 128, 0.274);
   height: 100%;
   width: 100%;
   text-align: center;
@@ -643,4 +664,66 @@ p {
   text-overflow: ellipsis;
   white-space: nowrap;
   padding: 8px 0;
+}
+
+/*------------CALENDAR TABLE-------------*/
+.faculty-table-box.calendar-table {
+  max-width: 1000px;
+  /* border: 3px solid cyan; */
+}
+.faculty-table-box.calendar-table .table-fix-header {
+  min-width: 100%;
+  /* border: 3px solid cyan; */
+}
+
+.faculty-table-box.calendar-table .schedule-list {
+  /* border: 2px solid blue; */
+}
+.faculty-table-box.calendar-table .schedule-list li .table-header {
+  /* border: 3px solid rgb(0, 255, 72); */
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.faculty-table-box.calendar-table .schedule-list li .table-header li {
+  /* border: 2px solid rgb(255, 255, 0); */
+  letter-spacing: 3px;
+}
+.faculty-table-box.calendar-table .schedule-list li .table-data {
+  /* border: 2px solid rgb(0, 251, 255); */
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.faculty-table-box.calendar-table .schedule-list li .table-data li {
+  /* border: 3px solid rgb(200, 0, 255); */
+  display: flex;
+}
+
+.faculty-table-box.calendar-table .schedule-list li .table-data li span {
+  letter-spacing: 2px;
+}
+.faculty-table-box.calendar-table
+  .schedule-list
+  li
+  .table-data
+  li
+  span:nth-child(2) {
+  margin: 0 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faculty-table-box.calendar-table
+  .schedule-list
+  li
+  .table-data
+  li
+  .middle-dot-box {
+  align-self: center;
+  /* border: 2px solid red; */
 }
