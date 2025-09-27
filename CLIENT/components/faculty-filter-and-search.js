@@ -7,7 +7,7 @@ class FilterSearch extends HTMLElement {
         </div>
         <div class="filter-form-box">
   
-<form id="courseForm">
+<form id="form">
   <div class="input-with-icon-box">
     <i class="fa-solid fa-magnifying-glass"></i>
   <input type="text" placeholder="Search..." class="relative-input">

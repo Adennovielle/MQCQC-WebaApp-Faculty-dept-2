@@ -32,7 +32,42 @@
       <faculty-user-and-notification></faculty-user-and-notification>
 
       <!-------------FACULTY FILTER AND SEARCH CARD------------>
-      <faculty-filter-and-search></faculty-filter-and-search>
+       <div class="faculty-filter-search-box">
+        <div class="filter-header-box">
+          <h4>FILTER</h4>
+        </div>
+        <div class="filter-form-box">
+  
+<form id="form">
+ 
+  <div class="select-and-btn-box">
+  <select id="select-course" name="select-course">
+    <option value="" disabled selected>Course</option>
+    <option value="bsit">BSIT - Bachelor of Science in Information Technology</option>
+    <option value="bsba">BSBA - Bachelor of Science in Business Administration</option>
+    <option value="bshm">BSHM - Bachelor of Science in Hospitality Management</option>
+    <option value="beed">BEED - Bachelor of Elementary Education</option>
+    <option value="bsa">BSA - Bachelor of Science in Accountancy</option>
+    <option value="bscrim">BSCRIM - Bachelor of Science in Criminology</option>
+    <option value="bspysch">BSPsych - Bachelor of Science in Psychology</option>
+  </select>
+
+   <select id="select-year" name="select-year">
+    <option value="" disabled selected>Year</option>
+
+    <option value="1st">1st Year</option>
+    <option value="2nd">2nd Year</option>
+    <option value="3rd">3rd Year</option>
+    <option value="4th">4th Year</option>
+  </select>
+  <button type="submit" class="submit-btn">Filter</button>
+  </div>
+</form>
+
+
+          </form>
+        </div>
+      </div>
 
       <!--------------FACULTY DATA-TABLE CARD------------------>
       <div class="faculty-table-box">
@@ -43,215 +78,27 @@
           </div>
           <ul class="table-header">
             <li>id</li>
-            <li>First Name</li>
-            <li>Middle Name</li>
-            <li>Last Name</li>
-            <li>Course</li>
-            <li>Address</li>
-            <li>Contact</li>
-            <li>Email</li>
-            <li>Enrollment Status</li>
-            <li>Enrollment Status</li>
-            <li>Enrollment Status</li>
-            <li>Enrollment Status</li>
+            <li>Student Name</li>
+            <li>Attendance</li>
           </ul>
         </div>
 
         <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-        </ul>
-        <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-        </ul>
-        <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-        </ul>
-        <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-        </ul>
-        <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-        </ul>
-        <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-        </ul>
-        <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-        </ul>
-        <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-        </ul>
-        <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-        </ul>
-        <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-        </ul>
-        <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-        </ul>
-        <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-        </ul>
-        <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-        </ul>
-        <ul class="table-data">
-          <li>1</li>
-          <li>Ichigo</li>
-          <li>N/A</li>
-          <li>Kurusaki</li>
-          <li>BSIT</li>
-          <li>123 fake st. brgy.fake Quezon City</li>
-          <li>123456789</li>
-          <li>fakeemail@gmail.com</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
-          <li>Enrolled</li>
+          <li>1 </li>
+          <li>Ichigo Kurosaksi </li>
+          <li class="attendance-input-box">
+
+            <form>
+        <input type="radio" id="present" name="-input" value="present"> 
+        <label for="present" class="radio-label">Present</label><br>
+
+        <input type="radio" id="absent" name="-input" value="absent">
+        <label for="absent" class="radio-label">Absent</label><br>
+
+        <input type="radio" id="late" name="-input" value="late">
+        <label for="late" class="radio-label">Late</label>
+        </form>
+        </li>
         </ul>
       </div>
     </main>

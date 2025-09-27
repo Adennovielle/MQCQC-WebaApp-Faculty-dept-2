@@ -351,7 +351,7 @@ main {
   margin: 0 auto;
   /* border: 2px solid red; */
   background-color: transparent;
-  padding-left: 370px;
+  padding-left: 350px;
 }
 
 main.expanded {
@@ -605,13 +605,13 @@ p {
 .faculty-table-box {
   /* border: 2px SOLID red; */
   overflow: auto;
-  width: 89%;
+  width: 87%;
   max-width: 1270px;
   margin: 0px auto;
   box-shadow: var(--faculty-box-shadow);
   border-radius: 4px;
   padding: 0 0 5px 20px;
-  height: 370px;
+  height: 400px;
   position: relative;
 }
 .faculty-table-box .table-fix-header {
@@ -726,4 +726,55 @@ p {
   .middle-dot-box {
   align-self: center;
   /* border: 2px solid red; */
+}
+
+/*-----------SMALL FILTER AND SEARCH CARD  FOR CALENDAR TABLE---------*/
+
+.faculty-filter-search-box.small .filter-form-box {
+  /* border: 3px solid rgb(255, 30, 0); */
+  margin-top: 10px;
+}
+.faculty-filter-search-box.small form {
+  /* border: 3px solid rgb(255, 230, 0); */
+}
+.faculty-filter-search-box.small form .select-and-btn-box {
+  /* border: 3px solid rgb(157, 255, 0); */
+  padding: 0;
+}
+.faculty-filter-search-box.small form .select-and-btn-box .submit-btn {
+  /* border: 3px solid rgb(0, 238, 255); */
+  flex: 1;
+  margin-top: 5px;
+}
+
+/*-----------SMALL FILTER AND SEARCH CARD FOR ATTENDANCE---------*/
+.faculty-table-box {
+  /* display: none; */
+}
+.faculty-table-box .table-header {
+  /* border: 3px solid rgb(0, 255, 38); */
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+.faculty-table-box .table-fix-header {
+  /* border: 4px solid rgb(32, 35, 4); */
+  min-width: 100%;
+}
+.faculty-table-box .table-fix-header .table-header-box {
+  /* border: 3px solid rgb(0, 255, 255); */
+  min-width: 100%;
+}
+.faculty-table-box .table-data {
+  /* border: 3px solid rgb(0, 30, 255); */
+  grid-template-columns: repeat(3, 1fr);
+}
+.faculty-table-box .table-data .attendance-input-box form {
+  /* border: 3px solid rgb(255, 0, 0); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+.faculty-table-box .table-data .attendance-input-box input {
+  border: 3px solid rgb(255, 0, 0);
 }
