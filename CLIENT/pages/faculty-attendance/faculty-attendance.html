@@ -36,49 +36,12 @@
         <div class="filter-header-box">
           <h4>FILTER</h4>
         </div>
-        <div class="filter-form-box">
-          <form id="form">
-            <div class="select-and-btn-box">
-              <select id="select-course" name="select-course">
-                <option value="" disabled selected>Course</option>
-                <option value="bsit">
-                  BSIT - Bachelor of Science in Information Technology
-                </option>
-                <option value="bsba">
-                  BSBA - Bachelor of Science in Business Administration
-                </option>
-                <option value="bshm">
-                  BSHM - Bachelor of Science in Hospitality Management
-                </option>
-                <option value="beed">
-                  BEED - Bachelor of Elementary Education
-                </option>
-                <option value="bsa">
-                  BSA - Bachelor of Science in Accountancy
-                </option>
-                <option value="bscrim">
-                  BSCRIM - Bachelor of Science in Criminology
-                </option>
-                <option value="bspysch">
-                  BSPsych - Bachelor of Science in Psychology
-                </option>
-              </select>
-
-              <select id="select-year" name="select-year">
-                <option value="" disabled selected>Year</option>
-                <option value="1st">1st Year</option>
-                <option value="2nd">2nd Year</option>
-                <option value="3rd">3rd Year</option>
-                <option value="4th">4th Year</option>
-              </select>
-              <button type="submit" class="submit-btn">Filter</button>
-            </div>
-          </form>
-        </div>
+        <!-------------FACULTY FILTER FOR ATTENDACE PAGE------------>
+        <faculty-dropdown-filter></faculty-dropdown-filter>
       </div>
 
       <!--------------FACULTY DATA-TABLE ATTENDANCE CARD------------------>
-      <form id="attendance-form">
+      <!-- <form id="attendance-form">
         <div class="faculty-table-box attendance-table">
           <div class="table-fix-header">
             <div class="table-header-box">
@@ -92,7 +55,6 @@
             </ul>
           </div>
 
-          <!-- Student Row Example -->
           <ul class="table-data">
             <li>1</li>
             <li>Ichigo Kurosaki</li>
@@ -123,7 +85,6 @@
             </li>
           </ul>
 
-          <!-- Add more student rows (change ID and name keys) -->
           <ul class="table-data">
             <li>2</li>
             <li>Rukia Kuchiki</li>
@@ -153,6 +114,651 @@
               <label for="late-2">Late</label>
             </li>
           </ul>
+
+          <button type="submit" class="submit-btn">Submit Attendance</button>
+        </div>
+      </form> -->
+
+      <form id="attendance-form">
+        <div class="faculty-table-box attendance-table">
+          <div class="table-header-box">
+            <h4>BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY - 1ST YEAR</h4>
+            <hr />
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Attendance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Student Row Example -->
+              <tr>
+                <td>1</td>
+                <td class="student-name">Ichigo Kurosaki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-1"
+                      name="attendance[1]"
+                      value="present"
+                    />
+                    <label for="present-1">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-1"
+                      name="attendance[1]"
+                      value="absent"
+                    />
+                    <label for="absent-1">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-1"
+                      name="attendance[1]"
+                      value="late"
+                    />
+                    <label for="late-1">Late</label>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Another Student -->
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="student-name">Rukia Kuchiki</td>
+                <td class="attendance-input-box">
+                  <div class="inputs">
+                    <input
+                      type="radio"
+                      id="present-2"
+                      name="attendance[2]"
+                      value="present"
+                    />
+                    <label for="present-2">Present</label>
+
+                    <input
+                      type="radio"
+                      id="absent-2"
+                      name="attendance[2]"
+                      value="absent"
+                    />
+                    <label for="absent-2">Absent</label>
+
+                    <input
+                      type="radio"
+                      id="late-2"
+                      name="attendance[2]"
+                      value="late"
+                    />
+                    <label for="late-2">Late</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
           <button type="submit" class="submit-btn">Submit Attendance</button>
         </div>
