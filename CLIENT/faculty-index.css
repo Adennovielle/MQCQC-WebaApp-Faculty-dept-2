@@ -53,6 +53,7 @@ body {
   overflow-x: hidden;
   background-color: var(--body-bg-color);
   padding-top: 85px;
+  position: relative;
 }
 .fa-file-pdf,
 .fa-file-word,
@@ -554,9 +555,9 @@ p {
 
 .faculty-filter-search-box {
   /* border: 3px solid rgb(255, 200, 0); */
-  padding: 12px;
-  width: 90%;
-  max-width: 1000px;
+  padding: 10px;
+  width: 87%;
+  max-width: 1080px;
   margin: 20px auto;
   background-color: var(--card-bg-color);
   box-shadow: var(--faculty-box-shadow);
@@ -612,7 +613,8 @@ p {
 .faculty-filter-search-box .filter-form-box form .select-and-btn-box select {
   /* border: 3px solid rgb(0, 8, 255); */
   padding: 0px 5px;
-  flex: 1;
+  /* flex: 1; */
+  width: 100%;
 }
 .faculty-filter-search-box
   .filter-form-box
@@ -806,9 +808,6 @@ p {
   padding-left: 80px;
   padding-right: 80px;
 }
-.faculty-table-box.attendance-table .attendance-input-box {
-  /* border: 3px solid rgb(38, 0, 255); */
-}
 .faculty-table-box.attendance-table .attendance-input-box .inputs {
   /* border: 3px solid rgb(0, 255, 204); */
   display: flex;
@@ -823,51 +822,216 @@ p {
 .faculty-table-box.attendance-table .attendance-input-box .inputs label {
   margin-left: 3px;
 }
-.faculty-table-box.attendance-table .submit-btn {
-  display: flex;
-  justify-self: end;
-  margin-top: 10px;
-}
+
 /*-----------DATA TABLE FOR FILES---------*/
-.faculty-table-box.file-table .table-fix-header {
-  /* border: 4px solid rgb(32, 35, 4); */
-  min-width: 100%;
+.faculty-table-box.file-table .table-header-box h4,
+.faculty-table-box.file-table .table-header-box hr,
+.faculty-table-box.file-table table {
+  min-width: 948px;
 }
-.faculty-table-box.file-table .table-fix-header .table-header-box {
-  /* border: 3px solid rgb(0, 255, 255); */
-  min-width: 100%;
+.faculty-table-box.file-table table thead th {
+  /* border: 4px solid rgb(3, 255, 20); */
+  padding-left: 30px;
+  text-align: start;
 }
-.faculty-table-box.file-table .table-header {
-  border: 3px solid rgb(0, 255, 38);
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-}
-.faculty-table-box.file-table .table-header li {
-  border: 3px solid rgb(255, 247, 0);
-}
-.faculty-table-box.file-table .table-data {
-  /* border: 3px solid rgb(0, 255, 38); */
-  grid-template-columns: repeat(3, 1fr);
-}
-.faculty-table-box.file-table .table-data li {
-  display: flex;
-  border: 3px solid violet;
-  position: relative;
-}
-.faculty-table-box.file-table .table-data li span {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  border: 3px solid brown;
-  /* width: 100%; */
-  /* margin: 0 auto; */
-}
-.faculty-table-box.file-table .table-data li i {
-  left: 10px;
-  position: absolute;
+.faculty-table-box.file-table table tbody td {
+  /* border: 4px solid rgb(3, 196, 255); */
+  padding-left: 30px;
 }
 
-.faculty-table-box.file-table .table-data li .fa-file-pdf {
-  /* border: 3px solid rgb(255, 230, 0); */
-  left: 12px;
+.faculty-table-box.file-table .submit-btn {
+  position: absolute;
+  right: 20px;
+}
+
+/*-------FILE UPLOADER MODAL CSS--------*/
+
+.faculty-file-uploder-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex; /* keep flex for centering */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  opacity: 1;
+  pointer-events: none; /* prevent clicking when hidden */
+  transition: opacity 0.4s ease;
+}
+
+.faculty-file-uploder-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 600px;
+  max-width: 90%;
+  text-align: center;
+  transform: translateY(-50px);
+  transition: transform 0.4s ease;
+}
+
+.faculty-file-uploder-modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.faculty-file-uploder-modal .modal-content .uploader-header {
+  /* border: 3px solid var(--primary-color); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+.faculty-file-uploder-modal .modal-content .uploader-header h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.faculty-file-uploder-modal .modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* border: 2px solid #fa0000; */
+}
+.faculty-file-upload-area {
+  border: 2px dashed #ccc;
+  border-radius: 6px;
+  padding: 20px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faculty-file-upload-area i {
+  color: var(--primary-color);
+  font-size: 30px;
+}
+.faculty-file-upload-area label:nth-child(3) {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.faculty-file-upload-area label:nth-child(4) {
+  color: var(--primary-color);
+  font-size: 12px;
+  word-spacing: 3px;
+}
+
+.faculty-file-uploder-modal .modal-content .close-button {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.faculty-file-uploder-modal .close-button:hover {
+  color: #000;
+}
+.faculty-file-uploder-modal .file-list {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+  scrollbar-width: none;
+  /* border: 3px solid red; */
+}
+.faculty-file-uploder-modal .file-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #444;
+  transition: background 0.2s ease;
+  /* border: 3px solid green; */
+}
+.faculty-file-uploder-modal .file-item .file-descriptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 3px solid rgb(0, 124, 128); */
+}
+.faculty-file-uploder-modal .file-item:hover {
+  background: #f9f9f9;
+}
+
+.faculty-file-uploder-modal .file-name {
+  flex: 2;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* border: 2px solid gray; */
+}
+
+.faculty-file-uploder-modal .middle-dot {
+  background-color: #ccc;
+  margin: 0;
+  height: 7px;
+  width: 7px;
+  /* border: 2px solid rgb(230, 0, 255); */
+}
+.faculty-file-uploder-modal .file-list .file-item .file-size {
+  flex: 1;
+  color: #666;
+  font-size: 13px;
+}
+.faculty-file-uploder-modal .file-list .file-item .file-status {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(28, 140, 28);
+  /* border: 2px solid orange; */
+}
+.faculty-file-uploder-modal .file-list .file-item .file-progress-bar {
+  height: 6px;
+  background: #c52727;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 15px;
+  width: 100%;
+  background-color: #bcc0bc;
+  margin-top: 10px;
+  /* border: 2px solid blue; */
+}
+.faculty-file-uploder-modal
+  .file-list
+  .file-item
+  .file-progress-bar
+  .file-progress {
+  height: 100%;
+  width: 30%;
+  background: #39c527;
+  border-radius: inherit;
+}
+.faculty-file-uploder-modal .fa-xmark:hover {
+  color: rgb(227, 64, 36);
+  cursor: pointer;
+}
+/* Scrollbar for file list */
+.faculty-file-uploder-modal .file-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.faculty-file-uploder-modal .file-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.faculty-file-uploder-modal .file-list::-webkit-scrollbar-thumb:hover {
+  background: #999;
 }
