@@ -791,10 +791,14 @@ p {
 }
 
 /*-----------DATA TABLE FOR ATTENDANCE---------*/
+.faculty-table-box.attendance-table {
+  /* border: 3px solid rgb(255, 0, 0); */
+}
 .faculty-table-box.attendance-table .table-header-box h4,
 .faculty-table-box.attendance-table .table-header-box hr,
 .faculty-table-box.attendance-table table {
   /* border: 3px solid green; */
+  width: 100%;
   min-width: 948px;
 }
 
@@ -821,6 +825,11 @@ p {
 }
 .faculty-table-box.attendance-table .attendance-input-box .inputs label {
   margin-left: 3px;
+}
+/*-----------DATA TABLE FOR ATTENDANCE-REPORT---------*/
+
+.faculty-table-box.attendance-table-report {
+  /* border: 3px solid rgb(255, 0, 0); */
 }
 
 /*-----------DATA TABLE FOR FILES---------*/
@@ -857,8 +866,7 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-
-  opacity: 1;
+  opacity: 0;
   pointer-events: none; /* prevent clicking when hidden */
   transition: opacity 0.4s ease;
 }
@@ -881,6 +889,7 @@ p {
 
 .faculty-file-uploder-modal.active .modal-content {
   transform: translateY(0);
+  /* border: 3px solid red; */
 }
 
 .faculty-file-uploder-modal .modal-content .uploader-header {
@@ -913,6 +922,10 @@ p {
   flex-direction: column;
   align-items: center;
 }
+.faculty-file-upload-area.active {
+  border: 2px solid var(--primary-color);
+  background-color: rgba(0, 0, 255, 0.088);
+}
 .faculty-file-upload-area i {
   color: var(--primary-color);
   font-size: 30px;
@@ -925,6 +938,9 @@ p {
   color: var(--primary-color);
   font-size: 12px;
   word-spacing: 3px;
+}
+.faculty-file-upload-area label {
+  cursor: pointer;
 }
 
 .faculty-file-uploder-modal .modal-content .close-button {
@@ -947,7 +963,7 @@ p {
   max-height: 200px;
   overflow-y: auto;
   border-top: 1px solid #ddd;
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
   /* border: 3px solid red; */
 }
 .faculty-file-uploder-modal .file-item {
@@ -980,7 +996,7 @@ p {
 
 .faculty-file-uploder-modal .middle-dot {
   background-color: #ccc;
-  margin: 0;
+  margin-top: 2px;
   height: 7px;
   width: 7px;
   /* border: 2px solid rgb(230, 0, 255); */
@@ -994,11 +1010,11 @@ p {
   flex: 1;
   font-size: 13px;
   font-weight: 600;
-  color: rgb(28, 140, 28);
+  color: rgb(9, 50, 196);
   /* border: 2px solid orange; */
 }
 .faculty-file-uploder-modal .file-list .file-item .file-progress-bar {
-  height: 6px;
+  height: 5px;
   background: #c52727;
   border-radius: 4px;
   overflow: hidden;
@@ -1013,11 +1029,12 @@ p {
   .file-item
   .file-progress-bar
   .file-progress {
-  height: 100%;
-  width: 30%;
+  height: inherit;
+  width: 60%;
   background: #39c527;
   border-radius: inherit;
 }
+
 .faculty-file-uploder-modal .fa-xmark:hover {
   color: rgb(227, 64, 36);
   cursor: pointer;
