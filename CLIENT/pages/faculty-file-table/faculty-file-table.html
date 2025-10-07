@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Students</title>
+    <title>Files</title>
     <link rel="stylesheet" href="../../faculty-index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,11 +18,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <script src="./faculty-file-table.js" type="module">
-      document.addEventListener("submit", (e) => e.preventDefault());
-    </script>
+    <script src="./faculty-file-table.js" type="module"></script>
   </head>
   <body>
     <!------------FACULTY NAVBAR/HEADER------------>
@@ -36,10 +34,12 @@
       <faculty-user-and-notification></faculty-user-and-notification>
 
       <!-------------FACULTY FILTER AND SEARCH CARD------------>
-      <faculty-filter-and-search></faculty-filter-and-search>
+      <faculty-small-filter-search></faculty-small-filter-search>
 
       <!--------------FACULTY FILES DATA-TABLE ------------------>
       <div class="faculty-table-box file-table">
+        <button class="refresh-button " type="button">
+          <i class="fa-solid fa-arrows-rotate"></i>
         <button class="upload-button submit-btn" type="button">
           <i class="fa-solid fa-upload"></i>Upload file
         </button>
@@ -59,322 +59,29 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-pdf"></i>
-                <span> MASTERLIST.pdf</span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-pdf"></i>
-                <span> MASTERLIST.pdf</span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-pdf"></i>
-                <span> MASTERLIST.pdf</span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-pdf"></i>
-                <span> MASTERLIST.pdf</span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-pdf"></i>
-                <span> MASTERLIST.pdf</span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-pdf"></i>
-                <span> MASTERLIST.pdf</span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-word"></i>
-                <span> MASTERLIST.docxxxxxxxx</span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-word"></i>
-                <span> MASTERLIST.docxxxxxxxx</span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-word"></i>
-                <span> MASTERLIST.docxxxxxxxx</span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-word"></i>
-                <span> MASTERLIST.docxxxxxxxx</span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-word"></i>
-                <span> MASTERLIST.docxxxxxxxx</span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-word"></i>
-                <span> MASTERLIST.docxxxxxxxx</span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-word"></i>
-                <span> MASTERLIST.docxxxxxxxx</span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-excel"></i>
-                <span>
-                  MASTERLIST.xlsrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-                </span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-excel"></i>
-                <span>
-                  MASTERLIST.xlsrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-                </span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-excel"></i>
-                <span>
-                  MASTERLIST.xlsrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-                </span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-excel"></i>
-                <span>
-                  MASTERLIST.xlsrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-                </span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-file-excel"></i>
-                <span>
-                  MASTERLIST.xlsrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-                </span>
-              </td>
-              <td>Registrar</td>
-              <td>202-12-25 12:00PM</td>
-            </tr>
+            <!-- Table rows will be dynamically inserted here -->
           </tbody>
         </table>
       </div>
-      <!--------------FACULTY FILE UPLOADER MODAL------------------>
 
+      <!--------------FACULTY FILE UPLOADER MODAL------------------>
       <div class="faculty-file-uploder-modal">
         <div class="modal-content">
           <div class="uploader-header">
             <h2>Upload File</h2>
-            <h4 class="file-completed-status">0/4 Files Completed</h4>
+            <h4 class="file-completed-status">0/0 Files Completed</h4>
             <span class="close-button">&times;</span>
           </div>
 
           <div class="faculty-file-upload-area">
-            <input type="file" id="fileInput" hidden name="files" multiple />
             <i class="fa-solid fa-cloud-arrow-up"></i>
-            <label for="fileInput">Browse Files</label>
-            <label for="fileInput">Drag and Drop Files Here</label>
+            <input type="file" id="fileInput" hidden name="files" multiple />
+            <label>Browse Files</label>
+            <label>Drag and Drop Files Here</label>
           </div>
           <ul class="file-list"></ul>
         </div>
       </div>
     </main>
   </body>
-
-  <script>
-    const uploadButton = document.querySelector(".upload-button");
-
-    const fileList = document.querySelector(".file-list");
-    const fileInput = document.getElementById("fileInput");
-    const fileCompletedStatus = document.querySelector(
-      ".file-completed-status"
-    );
-    const facultyFileUploaderModal = document.querySelector(
-      ".faculty-file-uploder-modal"
-    );
-    const facultyFileUploadArea = document.querySelector(
-      ".faculty-file-upload-area"
-    );
-    const closeButton = document.querySelector(".close-button");
-
-    facultyFileUploadArea.addEventListener("dragover", function (e) {
-      e.preventDefault();
-      facultyFileUploadArea.classList.add("active");
-    });
-
-    facultyFileUploadArea.addEventListener("dragleave", function (e) {
-      e.preventDefault();
-      facultyFileUploadArea.classList.remove("active");
-    });
-
-    facultyFileUploadArea.addEventListener("click", function () {
-      fileInput.click();
-    });
-
-    uploadButton.addEventListener("click", function () {
-      facultyFileUploaderModal.classList.add("active");
-    });
-
-    closeButton.addEventListener("click", function () {
-      facultyFileUploaderModal.classList.remove("active");
-    });
-
-    facultyFileUploaderModal.addEventListener("click", function (event) {
-      if (event.target === this) {
-        this.classList.remove("active");
-      }
-    });
-
-    fileInput.addEventListener("change", function (e) {
-      const files = e.target.files;
-      console.log(files);
-      handleSelectedFiles(files);
-    });
-
-    facultyFileUploadArea.addEventListener("drop", function (e) {
-      e.preventDefault();
-      facultyFileUploadArea.classList.remove("active");
-      const files = e.dataTransfer.files;
-      console.log(files);
-      handleSelectedFiles(files);
-    });
-
-    function handleSelectedFiles([...files]) {
-      if (files.length === 0) return;
-
-      files.forEach((file, index) => {
-        const uniqueIdentifier = Date.now() + "-" + index;
-        const fileItemHTML = createFileItemHTML(file, uniqueIdentifier);
-        fileList.insertAdjacentHTML("beforeend", fileItemHTML);
-        handleFileUploading(file, uniqueIdentifier);
-      });
-    }
-
-    function createFileItemHTML(file, uniqueIdentifier) {
-      const { name, size } = file;
-      const fileSizeMB = (size / (1024 * 1024)).toFixed(2);
-
-      return `
-      <li class="file-item" id="file-item-${uniqueIdentifier}">
-              <div class="file-descriptions">
-                <span class="file-name"
-                  >${name}</span
-                >
-                <div class="file-size">
-                  <span>0 MB</span> / <span>${fileSizeMB} MB</span>
-                </div>
-                <small class="middle-dot"></small>
-                <small class="file-status">Uploading...</small>
-                <small class="file-item-close-btn"
-                  ><i class="fa-solid fa-xmark"></i
-                ></small>
-              </div>
-              <div class="file-progress-bar">
-                <div class="file-progress"></div>
-              </div>
-            </li>
-      `;
-    }
-
-    function handleFileUploading(file, uniqueIdentifier) {
-      console.log("Uploading:", file.name, "ID:", uniqueIdentifier);
-
-      const xhr = new XMLHttpRequest();
-      const formData = new FormData();
-      formData.append("files", file);
-
-      // progress bar update
-      xhr.upload.addEventListener("progress", function (e) {
-        if (e.lengthComputable) {
-          const fileProgress = document.querySelector(
-            `#file-item-${uniqueIdentifier} .file-progress`
-          );
-          const fileSize = document.querySelector(
-            `#file-item-${uniqueIdentifier} .file-size`
-          );
-          const progress = Math.round((e.loaded / e.total) * 100);
-          fileProgress.style.width = progress + "%";
-          fileSize.innerText = `${progress}%`;
-        }
-      });
-
-      // ✅ onreadystatechange to catch *any* response
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-          // DONE
-          console.log("Response status:", xhr.status);
-          console.log("Response text:", xhr.responseText);
-          if (xhr.status >= 200 && xhr.status < 300) {
-            console.log("✅ Uploaded:", file.name);
-          } else {
-            console.error("❌ Upload failed:", xhr.responseText);
-          }
-        }
-      };
-
-      xhr.onerror = function (e) {
-        console.error("❌ Network error while uploading:", file.name, e);
-      };
-
-      xhr.open("POST", "http://localhost:3001/files/upload", true);
-      xhr.send(formData);
-    }
-  </script>
 </html>

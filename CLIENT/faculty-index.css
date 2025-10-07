@@ -57,7 +57,9 @@ body {
 }
 .fa-file-pdf,
 .fa-file-word,
-.fa-file-excel {
+.fa-file-excel,
+.fa-image,
+.fa-video {
   font-size: 20px;
 }
 .fa-file-pdf {
@@ -69,6 +71,12 @@ body {
 .fa-file-word {
   color: rgba(0, 0, 255, 0.767);
 }
+.fa-image {
+  color: orange;
+}
+.fa-video {
+  color: purple;
+}
 /*----------UTILITY CLASS--------------*/
 .middle-dot {
   border-radius: 50%;
@@ -76,13 +84,23 @@ body {
   width: 8px;
   background-color: var(--primary-color);
 }
+.refresh-button {
+  position: absolute;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  height: 33px;
+  width: 33px;
+  font-size: 13px;
+  /* border: 2px solid red; */
+}
 .submit-btn {
   padding: 10px 20px;
   background-color: var(--primary-color);
   border-radius: 5px;
   color: white;
 }
-.submit-btn:hover {
+button:hover {
   opacity: 0.8;
 }
 
@@ -837,6 +855,7 @@ p {
 .faculty-table-box.file-table .table-header-box hr,
 .faculty-table-box.file-table table {
   min-width: 948px;
+  width: 100%;
 }
 .faculty-table-box.file-table table thead th {
   /* border: 4px solid rgb(3, 255, 20); */
@@ -852,7 +871,11 @@ p {
   position: absolute;
   right: 20px;
 }
-
+.refresh-button {
+  right: 155px;
+  top: 17px;
+  z-index: 10;
+}
 /*-------FILE UPLOADER MODAL CSS--------*/
 
 .faculty-file-uploder-modal {
@@ -983,10 +1006,10 @@ p {
 .faculty-file-uploder-modal .file-item:hover {
   background: #f9f9f9;
 }
-
 .faculty-file-uploder-modal .file-name {
-  flex: 2;
+  width: 45%;
   font-weight: 500;
+  text-align: start;
   color: #333;
   white-space: nowrap;
   overflow: hidden;
@@ -994,27 +1017,34 @@ p {
   /* border: 2px solid gray; */
 }
 
-.faculty-file-uploder-modal .middle-dot {
-  background-color: #ccc;
-  margin-top: 2px;
-  height: 7px;
-  width: 7px;
-  /* border: 2px solid rgb(230, 0, 255); */
+.faculty-file-uploder-modal .file-list .file-item .middle-dot {
+  height: 4px;
+  width: 4px;
+  margin-left: -10px;
+  background-color: #666;
+  /* border: 2px solid rgb(0, 255, 110); */
 }
+
 .faculty-file-uploder-modal .file-list .file-item .file-size {
-  flex: 1;
   color: #666;
   font-size: 13px;
+  /* border: 2px solid rgb(230, 0, 255); */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 155px;
+  text-align: start;
 }
 .faculty-file-uploder-modal .file-list .file-item .file-status {
-  flex: 1;
   font-size: 13px;
   font-weight: 600;
-  color: rgb(9, 50, 196);
+  color: #007bff;
   /* border: 2px solid orange; */
+  width: 80px;
 }
+
 .faculty-file-uploder-modal .file-list .file-item .file-progress-bar {
-  height: 5px;
+  height: 4px;
   background: #c52727;
   border-radius: 4px;
   overflow: hidden;
@@ -1030,7 +1060,7 @@ p {
   .file-progress-bar
   .file-progress {
   height: inherit;
-  width: 60%;
+  width: 0;
   background: #39c527;
   border-radius: inherit;
 }
