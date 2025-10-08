@@ -1,0 +1,6 @@
+# Ignore uploaded files
+SERVER/Uploads/
+uploads/
+*.mp4
+*.zip
+*.exe
